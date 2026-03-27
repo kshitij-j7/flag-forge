@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "rootDir": ".", // root of all source files (includes src + packages)
+        "outDir": "./dist", // where compiled JS files are emitted
+        "module": "NodeNext", // use modern ESM-compatible module system (aligns with Node) // Automatically maps .js importsto their .ts files
+        "target": "ES2020", // JS version to compile down to (Node 18 supports this)
+        "moduleResolution": "NodeNext", // how imports are resolved (must match module=NodeNext)
+        "esModuleInterop": true, // allows default import from CommonJS packages
+        "strict": true, // enables strict type checking (catches bugs early)
+        "baseUrl": ".", // base path for resolving non-relative imports
+        "paths": {
+            "@flagforge/types": ["packages/types/src/index.ts"] // alias for shared types package
+        },
+        "resolveJsonModule": true, // allows importing .json files as modules
+        "forceConsistentCasingInFileNames": true, // prevents case mismatch issues across OS
+        "skipLibCheck": true // skips type checking of node_modules for faster builds
+    },
+    "include": ["src", "packages/types"]
+}
